@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#form1").submit(function(){
+				var first = $('#first_name').val();
+				var last = $('#last_name').val();
+				var description = $('#description').val();
+				var contactbox = "<div class = 'cards'><h1>"+first+" "+last+"</h1>"+"<h1 class=desc>"+description+"</h1><br>"+"<h5 class='info'>Click for Description</h5></div>";
+
+				var clearit = $(this).children('input');
+				for (var i = 0; i<clearit.length; i++){
+					$(clearit[i]).val("");
+				};
+
+
+				$(this).siblings().append(contactbox);
+
+				return false
+			});
+			$(document).on("click", ".info",function(){
+				$(this).siblings("h1").toggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<form id="form1">
+		First Name: <input type="text" id="first_name">
+		Last Name: <input type="text" id="last_name">
+		Description: <input type="text" id="description">
+		<button>Add User</button>
+	</form>
+	<div id="container">
+	</div>
+</body>
+</html>

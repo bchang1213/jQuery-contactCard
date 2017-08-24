@@ -1,0 +1,40 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+}
+
+body{
+	width: 970px;
+}
+
+form{
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+input{
+	display: block;
+}
+
+#description{
+	width: 200px;
+	height: 100px;
+}
+
+.cards{
+	border-style: solid;
+	border-color: black;
+	margin-left: 200px;
+	margin-top: 50px;
+	padding:20px;
+}
+
+form,#container{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.desc{
+	display: none;
+}
